@@ -124,3 +124,21 @@ scrollBottom.forEach((el) => observer.observe(el));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el) => observer.observe(el));
+
+// Gmail compose function
+function openGmail() {
+    const email = 'govindchavakula.859@gmail.com';
+    const subject = 'Inquiry from Portfolio Website';
+    const body = 'Hello Govind,\n\nI visited your portfolio and would like to get in touch.\n\nBest regards,';
+    
+    // Try to open Gmail compose
+    const gmailUrl = `https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}&tf=1`;
+    
+    // Open Gmail in new tab
+    const newWindow = window.open(gmailUrl, '_blank');
+    
+    // Fallback to mailto if Gmail doesn't work
+    if (!newWindow) {
+        window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+}

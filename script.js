@@ -140,5 +140,5 @@ function openGmail() {
     // Fallback to mailto if Gmail doesn't work
     if (!newWindow) {
         window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    }
+    } 
 }

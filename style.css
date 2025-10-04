@@ -41,7 +41,7 @@ body {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -55,7 +55,7 @@ header {
 
 header.sticky {
   background: var(--bg-color);
-  border-bottom: 1px solid var(--secon-bg-color);
+  /* border-bottom: 1px solid var(--secon-bg-color); */
   padding: 12px 10%;
 }
 
@@ -1254,7 +1254,7 @@ footer a i {
   }
 
   section {
-    padding: 50px 5%;
+    padding: 0px 5% 25px 5%;
   }
 
   .navlist a {
@@ -1444,10 +1444,11 @@ footer a i {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 600px) {
   html {
     font-size: 80%;
   }
+    /* background-attachment: scroll !important; */
   footer p {
     font-size: 0.6rem;
   }
@@ -1577,7 +1578,8 @@ footer a i {
 
   /* Contact Section Mobile */
   .contact-hero {
-    min-height: 60vh;
+  min-height: 60vh;
+  background-attachment: scroll !important;
   }
 
   .contact-content {
@@ -1603,4 +1605,5 @@ footer a i {
   .get-in-touch-btn i {
     font-size: 1.1rem;
   }
+
 }
